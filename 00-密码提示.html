@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ipt{
+            border-color: rgb(204, 204, 204);
+            border-radius: 2px;
+            width: 200px;
+            height: 20px;
+        }
+        .massage{
+            display: inline-block;
+            font-size: 12px;
+            color: #999;
+            background:url(images/提示1.png)no-repeat left center ;
+            background-size: 20px;
+            padding-left: 20px;
+        }
+        .wrong{
+            color: red;
+            background:url(images/错误.png)no-repeat left center ;
+            background-size: 20px;
+
+        }
+        .right{
+            color: green;
+            background: url(images/正确.png)no-repeat left center;
+            background-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="password" class='ipt'>
+        <p class='massage'>请输入6-12位密码</p>
+
+    </div>
+    <script>
+        var ipt = document.querySelector('.ipt')
+        var massage = document.querySelector('.massage')
+        ipt.onblur = function(){
+            //失去焦点的时候，判断是否是6-16位，然后改变对应的样式
+            //正确则改为正确的图标，提示“校验正确”
+            //错误则改为错误的图标，提示“请输入6-16的密码”
+            if(this.value.length<6||this.value.length>12){
+                massage.className='massage wrong'
+                massage.innerHTML='格式错误，请输入6-12位密码'
+                console.log('错误')
+            }
+            else{
+                massage.className='massage right'
+                massage.innerHTML='格式正确'
+
+            }
+
+        }
+    </script>
+</body>
+</html>

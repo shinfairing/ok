@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .username{
+        height: 20px;
+        width: 200px;
+        color: #999;
+        border-radius: 2px;
+        
+    }
+    .password{
+        height: 20px;
+        width: 200px;
+        color: #999;
+        border-radius: 2px;
+    }
+    input:focus{
+        color:pink;
+    }
+    .ad{
+        width: 20%;
+    }
+    .cl{
+        width: 20px;
+    }
+    .dd{
+        border-bottom:#999;
+    }
+    .dpd{
+        display: none;
+    }
+</style>
+<body>
+    <div>
+        <input type="Text" class='username' value="邮箱/ID/手机号"> 
+        <input type="Text" class='password' value="密码">
+        <div class='adac'>
+            <img src="images/广告.png" alt="" class="ad"> 
+            <img src="images/关  闭.png" alt="" class="cl">
+        </div>
+
+        <div class='all'>
+            <p class="menu">菜单</p>
+            <div class='dpd'>
+                <div class='dd'>私信</div>
+                <div class='dd'>评论</div>
+                <div class='dd'>@我</div>
+            </div>
+        </div>
+    
+    </div>
+    <script>
+        var uipt = document.querySelector(".username")
+        var pipt = document.querySelector('.password')
+        uipt.onfocus=function(){
+            if(this.value==='邮箱/ID/手机号'){
+                this.value='';
+                this.style.color='#333';
+                this.className='username change'
+           
+           
+            }
+        }
+        uipt.onblur=function(){
+            if(this.value===''){
+                this.value='邮箱/ID/手机号';
+                this.style.color="#999";
+             
+
+            }
+        }
+        pipt.onfocus=function(){
+            if(this.value==='密码'){
+                this.value='';
+                this.type='password';
+                this.style.color='#333';
+            }
+        }
+        pipt.onblur=function(){
+            if(this.value===''){
+                this.value='密码';
+                this.type='text';
+                this.style.color="#999";
+
+            }
+        }
+            //获取元素
+        var ad =document.querySelector('.ad');
+        var cl=document.querySelector('.cl')
+        var adac = document.querySelector('.adac');
+
+        cl.onclick=function(){
+            adac.style.display='none';
+            console.log(adac);
+        }
+
+        //获取元素
+        var menu=document.querySelector('.menu')
+        var dpd=document.querySelector('.dpd')
+        var all=document.querySelector('.all')
+
+        //注册事件
+        //鼠标无法移到内容上就消失了
+        menu.onmouseover=function(){
+            dpd.style.display='block';
+        }
+        all.onmouseout=function(){
+            dpd.style.display='none';
+        }
+        //鼠标无法移到内容上就消失了
+        //聚焦文本框无法变成粉色
+        
+        
+      
+    </script>
+    
+</body>
+</html>

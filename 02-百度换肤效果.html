@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url('images1/-雪满松-的微博_微博-1.jpg') no-repeat center top;
+            background-size:cover;
+        }
+        .baidu{
+            display: inline-block;
+
+        }
+        .baidu li{
+            float:left;
+            list-style: none;
+        }
+        .baidu ul{
+            background-color: white;
+        }
+        .baidu img{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="baidu">
+        <li><img src="images1/-雪满松-的微博_微博-1.jpg" alt=""></li>
+        <li><img src="images1/-雪满松-的微博_微博-3.jpg" alt=""></li>
+        <li><img src="images1/LOFTER（乐乎） - 让兴趣，更有趣.jpg" alt=""></li>
+        <li><img src="images1/骑车去（一）插画插画习作峰籽一 - 原创作品 - 站酷 ZCOOL.jpg" alt=""></li>
+    </ul>
+    <script>
+        var lis=document.querySelector('.baidu').querySelectorAll('img');
+        for(var i=0;i<lis.length;i++){
+            lis[i].onclick=function(){
+                document.body.style.backgroundImage='url('+ this.src +')';
+            }
+        }
+
+    </script>
+</body>
+</html>
