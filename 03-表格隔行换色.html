@@ -7,6 +7,77 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <table>
+        <thead>
+            <tr>
+                <th>代码</th>
+                <th>名称</th>
+                <th>最新公布净值</th>
+                <th>累计净值</th>
+                <th>前单位净值</th>
+                <th>净值增长率</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0029393</td>
+                <td>农银金穗债券</td>
+                <td>1.3003</td>
+                <td>1.3040</td>
+                <td>1.0394</td>
+                <td>+0.2930%</td>
+            </tr>
+            <tr>
+                <td>0029393</td>
+                <td>农银金穗债券</td>
+                <td>1.3003</td>
+                <td>1.3040</td>
+                <td>1.0394</td>
+                <td>+0.2930%</td>
+            </tr>   <tr>
+                <td>0029393</td>
+                <td>农银金穗债券</td>
+                <td>1.3003</td>
+                <td>1.3040</td>
+                <td>1.0394</td>
+                <td>+0.2930%</td>
+            </tr>   <tr>
+                <td>0029393</td>
+                <td>农银金穗债券</td>
+                <td>1.3003</td>
+                <td>1.3040</td>
+                <td>1.0394</td>
+                <td>+0.2930%</td>
+            </tr>   <tr>
+                <td>0029393</td>
+                <td>农银金穗债券</td>
+                <td>1.3003</td>
+                <td>1.3040</td>
+                <td>1.0394</td>
+                <td>+0.2930%</td>
+            </tr>   <tr>
+                <td>0029393</td>
+                <td>农银金穗债券</td>
+                <td>1.3003</td>
+                <td>1.3040</td>
+                <td>1.0394</td>
+                <td>+0.2930%</td>
+            </tr>
+        </tbody>
+    </table>
+ 
+    <script>
+        var trs =document.querySelector('tbody').querySelectorAll('tr');
+        for(var i=0;i<trs.length;i++){
+            trs[i].onmouseover=function(){
+                this.style.background='blue'
+                this.style.color='white'
+            }
+            trs[i].onmouseout=function(){
+                this.style.background=''
+                this.style.color='black'
+            }
+        }
+    </script>
 </body>
 </html>
