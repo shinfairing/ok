@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tablist{
+            background-color: rgb(221, 221, 221);
+        }
+        .tablist li{
+            display: inline-block;
+            list-style: none;
+
+        }
+        .tabcon{
+            display: none;
+        }
+       
+        .ckd{
+            background-color: #cd5c5c;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class='tab'>
+        <div class='tablist'>
+            <ul>
+                <li>商品介绍</li>
+                <li>规格与包装</li>
+                <li>售后保障</li>
+                <li>商品评价</li>
+                <li>手机社区</li>
+            </ul>
+        </div>
+        <div class='tabcon'>
+            <div>商品介绍模块内容</div>
+            <div>规格与包装内容</div>
+            <div>售后保障内容</div>
+            <div>商品评价内容</div>
+            <div>手机社区内容</div>
+        </div>
+    </div>
+  <script>
+      var tabdiv=document.querySelector('.tablist') //tab块
+      var lis=document.querySelector('.tablist').querySelectorAll('li')//tab每个li
+      var tabco=document.querySelector('.tabcon').querySelectorAll('div')
+
+      for(var i=0;i<lis.length;i++){
+          lis[i].setAttribute('index',i)
+          lis[i].onclick=function(){
+            
+              for(var j=0;j<lis.length;j++){
+                lis[j].className=''; 
+              }
+              
+              this.className='ckd';
+
+              var index = this.getAttribute('index');
+              for(var p=0;p<tabco.length;p++){
+                  tabco[p].style.display='none';
+              }
+             
+              tabco[index].style.display='block';
+              
+
+          }
+          
+          
+      }
+  </script>
+</body>
+</html>

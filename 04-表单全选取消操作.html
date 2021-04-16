@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .ce{
+        margin:0 auto
+    }
+    .tou{
+        background-color: honeydew;
+    }
+   
+</style>
+<body>
+    <table class='ce'>
+        <thead class="tou">
+            <tr>
+                <th><input type="checkbox" name="" id="tj"></th>
+                <th>商品</th>
+                <th>价钱</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><input type="checkbox" class="duo"></th>
+                <th>iphone8</th>
+                <th>8000</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox" class="duo"></th>
+                <th>ipad pro</th>
+                <th>5000</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox" class="duo"></th>
+                <th>ipad air</th>
+                <th>2000</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox" class="duo"></th>
+                <th>apple watch</th>
+                <th>2000</th>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        //获取元素
+        var qx = document.querySelector('#tj') //全选框
+        var zi = document.querySelector('tbody').querySelectorAll('input') //表格内选框   
+        qx.onclick=function(){
+            console.log(zi);
+            for(var i=0;i<zi.length;i++){ 
+                zi[i].checked=this.checked;
+                console.log(this.checked);
+            }
+            
+        }
+
+        for(i=0 ;i<zi.length;i++){
+            zi[i].onclick=function(){
+                var flag=true;
+                for(var i=0;i<zi.length;i++){
+                    
+                    if(!zi[i].checked){
+                        flag=false;
+                        break;
+                    }
+                    
+                }
+                qx.checked=flag;
+            }
+        }
+
+                                                                                                                        
+    </script>
+</body>
+</html>
